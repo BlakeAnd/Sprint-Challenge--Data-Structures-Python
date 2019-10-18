@@ -44,4 +44,29 @@ class LinkedList:
 
   def reverse_list(self):
     # TO BE COMPLETED
-    pass
+    # if self.head and self.head.next_node and self.head.next_node.next_node:
+    #   print("ok")
+    #   stable_point = self.head
+    #   current = self.head.next_node
+    #   print("stable", stable_point.value)
+    #   while current:
+    #     stable_point.next_node = current.next_node
+    #     current.next_node = stable_point
+    #     current = self.head.next_node
+    # elif self.head and self.head.next_node:
+    #   end = self.head.next_node
+    #   end.next_node = self.head
+    current = self.head
+    arr = []
+    while current:
+      arr.append(current.value)
+      current = current.next_node
+    # print(arr)
+    current = self.head
+    counter = 1
+    while current:
+      current.value = arr[len(arr) - counter]
+      counter += 1
+      current = current.next_node
+      
+      
